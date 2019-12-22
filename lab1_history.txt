@@ -98,9 +98,9 @@
    98  curl wttr.in
    99  hostname -I
   100  curl ifconfig.me
-   95  sudo id
-   96  su
-   97  cd
-   98  exit
-   99  history
-  100  history > lab1_history.txt
+  101  sudo id
+  102  su
+  103  cd
+  104  exit
+  105  history
+  106  history > lab1_history.txt
