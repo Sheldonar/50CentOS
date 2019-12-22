@@ -84,14 +84,20 @@
    84  top -b -n1 | sort -d -k12
    85  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
    86  cat /etc/passwd | sort -d -k5 | tr ":" " "
-   87  cd /usr/doc/git-*
-   88  yum install-y git
-   89  yum install -y git
-   90  su
-   91  ping ya.ru
-   92  curl wttr.in
-   93  hostname -I
-   94  curl ifconfig.me
+   87  cat /etc/passwd | sort -d -k5 | tr ":" " "cd /usr/share/doc/git-*
+   88  cd /usr/share/doc/git-*
+   89  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+   90  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+   91  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+   92  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+   93  cd /usr/doc/git-*
+   94  yum install-y git
+   95  yum install -y git
+   96  su
+   97  ping ya.ru
+   98  curl wttr.in
+   99  hostname -I
+  100  curl ifconfig.me
    95  sudo id
    96  su
    97  cd
